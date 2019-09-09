@@ -1,0 +1,77 @@
+<% include ../index.ejs %>
+
+
+<div class="container">
+    <div class="my-0 p-3 bg-white rounded shadow-sm">
+            <div class="message-box">
+                    <small> <% include ../middleware/messages.ejs %></small>
+            </div>
+        <div class="d-flex align-items-center my-3 text-white-50 bg-purple rounded shadow-sm">
+                    
+                <h6>Registration Form</h6>
+                
+        </div>
+
+
+
+        <!-- FORM -->
+        <form action="/user/registration" method="POST">
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" class="form-control" id="username"
+                    placeholder="Enter unique uername">
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter password">
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <label for="confirmpass">Confirm Password</label>
+                <input type="password" name="confirmpass" class="form-control" id="confirmpass"
+                    placeholder="Confirm password">
+            </div>
+
+
+            <!-- IMAGE -->
+<!--             <div class="form-group">
+                <label for="avtar">Browse image</label>
+                <input type="file" name="avtar" class="form-control-file" id="avtar">
+            </div> -->
+
+            <!-- REMEMBER ME -->
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+
+
+        <!-- END FORM -->
+        <div class="media text-muted pt-3">
+            <small class="d-block text-right mt-3 pb-4">
+                <a href="/login">Already Login</a>
+                <a href="#" style="color: #6f42c1"><span> || </span> Admin Login</a>
+            </small>
+        </div>
+    </div>
+</div>
+
+
+
+
+<% include ../include/footer %>
